@@ -31,22 +31,23 @@
     id="cai-webclient-custom">
     </script>
 <script defer>
+    const webClient = window.sap.cai.webclient;
+
     // Add click eventlistener on chat button
-    function startConvoHandler() {
-        const chatButton = document.querySelector("#cai-webclient-builtin-button");
-        chatButton.addEventListener("click", initiateMessage);
-    }
+    // function startConvoHandler() {
+    //     const chatButton = document.querySelector("#cai-webclient-builtin-button");
+    //     chatButton.addEventListener("click", initiateMessage);
+    // }
 
     // send message to bot after 1s
-    function initiateMessage() {
-        const webClient = window.sap.cai.webclient;
-        webclient.show()
-        setTimeout(() => webClient.sendMessage("Hi"), 1500);
+    const initiateConversation = () => {
+        () => webClient.sendMessage("Hallo Ada");
     }
 
-    // initiate process after 1s to make sure html elements rendered
-    setTimeout(function () { startConvoHandler() }, 1500);
+    // initiate process after 2s to make sure html elements rendered
 
+    setTimeout(() => webClient.show(), 500)
+    setTimeout(() => initiateConversation(), 1000)
 
 </script>
 
