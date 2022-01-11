@@ -41,13 +41,13 @@
 
     // send message to bot after 1s
     const initiateConversation = () => {
-        () => webClient.sendMessage("Hallo Ada");
+        webClient.sendMessage("Hallo Ada!");
     }
 
     // initiate process after 2s to make sure html elements rendered
 
     setTimeout(() => webClient.show(), 500)
-    setTimeout(initiateConversation(), 1000)
+    setTimeout(() => initiateConversation(), 1000)
 
 </script>
 
